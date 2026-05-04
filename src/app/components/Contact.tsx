@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, Linkedin, Heart } from 'lucide-react';
+import { Mail, Phone, Linkedin } from 'lucide-react';
 import { useInView } from './hooks/useInView';
 
 export function Contact() {
@@ -45,16 +45,8 @@ export function Contact() {
             </a>
           </div>
 
-          <div className="pt-8 border-t border-white/20">
-            <p className="text-sm opacity-75 mb-2">התנדבות</p>
-            <div className="flex items-center justify-center gap-2">
-              <Heart className="w-5 h-5 text-red-300" />
-              <p>מגן דוד אדום (מד"א) | פרמדיק, חיפה</p>
-            </div>
-          </div>
-
           <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-sm opacity-75">
+            <p className="text-sm opacity-75" dir="rtl">
               © 2026 נסים טוגנדהפט. כל הזכויות שמורות.
             </p>
           </div>

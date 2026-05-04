@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { Briefcase } from 'lucide-react';
 import { useInView } from './hooks/useInView';
 
 const experiences = [
@@ -93,24 +92,19 @@ export function Experience() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-100 rounded-lg">
-                    <Briefcase className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div className="flex-1" dir="rtl">
-                    <h3 className="text-2xl mb-2">{exp.company}</h3>
-                    <p className="text-xl text-blue-600 mb-1">{exp.role}</p>
-                    {exp.location && <p className="text-gray-600 mb-1">{exp.location}</p>}
-                    <p className="text-gray-500 mb-4">{exp.period}</p>
-                    <ul className="space-y-2">
-                      {exp.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-blue-600 mt-1">•</span>
-                          <span className="text-gray-700">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="flex-1" dir="rtl">
+                  <h3 className="text-2xl mb-2">{exp.company}</h3>
+                  <p className="text-xl text-blue-600 mb-1">{exp.role}</p>
+                  {exp.location && <p className="text-gray-600 mb-1">{exp.location}</p>}
+                  <p className="text-gray-500 mb-4">{exp.period}</p>
+                  <ul className="space-y-2">
+                    {exp.highlights.map((highlight, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-gray-700">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

@@ -1,5 +1,3 @@
-import { Mail, Phone, Linkedin, Award, Briefcase, GraduationCap, Code, Users, Globe } from 'lucide-react';
-import { motion } from 'motion/react';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
