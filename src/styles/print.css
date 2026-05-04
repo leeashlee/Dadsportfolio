@@ -1,0 +1,14 @@
+@media print {
+  /* Apply this to any container you don't want sliced */
+  .pdf-section,
+  section,
+  .card,
+  p {
+    break-inside: avoid;
+    page-break-inside: avoid; /* Legacy fallback */
+  }
+  .new-page-section {
+    break-before: page;
+    page-break-before: always; /* Legacy fallback */
+  }
+}
