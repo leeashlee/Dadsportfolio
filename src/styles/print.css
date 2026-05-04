@@ -9,16 +9,19 @@
     padding: 0;
   }
 
-  /* Prevent page breaks inside these elements */
-  section,
-  .pdf-section,
+  /* Prevent page breaks inside smaller elements */
   div[class*="rounded-xl"],
   div[class*="shadow"],
   li,
   h1, h2, h3, h4, h5, h6,
   p {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Allow sections to break naturally if too long */
+  section {
+    break-inside: auto;
   }
 
   /* Keep list items together */
@@ -27,8 +30,8 @@
   }
 
   li {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   /* Prevent orphans and widows */
@@ -37,10 +40,10 @@
     widows: 3;
   }
 
-  /* Add page breaks before major sections if needed */
+  /* Only use this class when you explicitly want a page break */
   .new-page-section {
-    break-before: page !important;
-    page-break-before: always !important;
+    break-before: page;
+    page-break-before: always;
   }
 
   /* Ensure backgrounds and gradients print */
