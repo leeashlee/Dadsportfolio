@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 pdf-section">
       <div className="max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

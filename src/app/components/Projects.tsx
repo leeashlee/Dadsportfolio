@@ -35,7 +35,7 @@ export function Projects() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-white/50">
+    <section ref={ref} className="py-20 px-6 bg-white/50 pdf-section">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,14 +1,51 @@
 @media print {
-  /* Apply this to any container you don't want sliced */
-  .pdf-section,
-  section,
-  .card,
-  p {
-    break-inside: avoid;
-    page-break-inside: avoid; /* Legacy fallback */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Prevent page breaks inside these elements */
+  section,
+  .pdf-section,
+  div[class*="rounded-xl"],
+  div[class*="shadow"],
+  li,
+  h1, h2, h3, h4, h5, h6,
+  p {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Keep list items together */
+  ul, ol {
+    break-inside: auto;
+  }
+
+  li {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Prevent orphans and widows */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Add page breaks before major sections if needed */
   .new-page-section {
-    break-before: page;
-    page-break-before: always; /* Legacy fallback */
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Ensure backgrounds and gradients print */
+  div[class*="bg-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }

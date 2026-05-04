@@ -39,7 +39,7 @@ export function Skills() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} className="py-20 px-6">
+    <section ref={ref} className="py-20 px-6 pdf-section">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

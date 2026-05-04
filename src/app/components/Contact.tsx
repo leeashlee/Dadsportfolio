@@ -6,7 +6,7 @@ export function Contact() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section ref={ref} className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white pdf-section">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
